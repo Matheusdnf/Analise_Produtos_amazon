@@ -1,5 +1,5 @@
 CREATE TABLE user (
-    user_id VARCHAR(50) PRIMARY KEY,
+    user_id VARCHAR(300) PRIMARY KEY,
     user_name TEXT
 );
 
@@ -25,3 +25,8 @@ CREATE TABLE review (
     FOREIGN KEY (user_id) REFERENCES user(user_id),
     FOREIGN KEY (product_id) REFERENCES product(product_id)
 );
+
+
+CREATE INDEX idx_review_user_id ON review(user_id);
+
+CREATE INDEX idx_review_product_id ON review(product_id);
