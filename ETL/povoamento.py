@@ -2,8 +2,8 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # Configurações do banco
-DB_USER = "matheus"  #Inserir o nome do usuário do banco de dados 
-DB_PASSWORD = "matheus1700"  #inserir senha do usuário
+DB_USER = ""  #Inserir o nome do usuário do banco de dados 
+DB_PASSWORD = ""  #inserir senha do usuário
 DB_NAME = "Produtos_amazon" #nome do banco criado
 DB_HOST = "127.0.0.1" #host escolhido para rodar, o que eu utilizei foi um local
 DB_PORT = "3306" #porta local disponível no computador
