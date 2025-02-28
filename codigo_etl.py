@@ -25,15 +25,15 @@ existing_product_ids = get_existing_ids("product", "product_id")
 existing_review_ids = get_existing_ids("review", "review_id")
 
 # Filtrar apenas os novos registros
-new_users = df[['user_id', 'user_name']].drop_duplicates()
+new_users = df[['user_id', 'user_name']]
 new_users = new_users[~new_users['user_id'].astype(str).isin(existing_user_ids)]
 
 new_products = df[['product_id', 'product_name', 'category', 'discounted_price', 
                    'actual_price', 'discount_percentage', 'rating', 
-                   'about_product', 'img_link', 'product_link']].drop_duplicates()
+                   'about_product', 'img_link', 'product_link']]
 new_products = new_products[~new_products['product_id'].astype(str).isin(existing_product_ids)]
 
-new_reviews = df[['review_id', 'review_title', 'review_content', 'user_id', 'product_id']].drop_duplicates()
+new_reviews = df[['review_id', 'review_title', 'review_content', 'user_id', 'product_id']]
 new_reviews = new_reviews[~new_reviews['review_id'].astype(str).isin(existing_review_ids)]
 
 # Verificar se há novos dados
